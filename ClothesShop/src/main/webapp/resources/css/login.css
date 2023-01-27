@@ -1,0 +1,17 @@
+
+
+
+/*---------------------
+		main
+-----------------------*/
+main{
+	padding-top: 64px;
+}
+
+.form-login h3 {
+  color: #252525;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 35px;
+}
+

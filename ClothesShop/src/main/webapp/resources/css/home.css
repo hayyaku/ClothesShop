@@ -1,0 +1,121 @@
+
+/*---------------------
+		main
+-----------------------*/
+
+/* slider */
+.intro {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+  position: relative;
+}
+
+.gallery-inner {
+  width: 100%;
+  height: 500px;
+}
+
+.gallery-inner img {
+  height: 100%;
+  width: 100%;
+}
+
+.intro .controlLeft,
+.intro .controlRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  height: 30px;
+  width: 30px;
+  background: rgba(255, 255, 255, 0.3);
+  color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.intro .controlLeft {
+  left: 20px;
+}
+.intro .controlRight {
+  right: 20px;
+}
+.intro .controlLeft:hover,
+.intro .controlRight:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 1);
+  color: rgba(0, 0, 0, 1);
+}
+
+/* list product 
+----------------*/
+.product .top-title{
+  text-align: center;
+}
+.product .top-title h2{
+  font-weight: 500;
+}
+
+/* show item
+----------------*/
+/* item */
+.product .item{
+  min-width: 257px;
+  max-width: 355px;
+  padding: 5px;
+}
+.product .item .img{
+  position: relative;
+  overflow: hidden;
+}
+.product .item img {
+  width: 100%;
+  height: 320px;
+  transition: 0.3s;
+}
+.product .item:hover img {
+  transform: scale(1.1);
+}
+.product .item .img ul{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  transition: 0.3s;
+}
+.product .item:hover .img ul{
+  transform: translateY(-110%)
+}
+.product .item .img ul li:hover{
+  cursor: pointer;
+}
+.product .item .img ul .icon-bag{
+  background-color: orange;
+  color: white;
+  padding: 10px 15px;
+  font-size: 20px;
+  margin-right: 20px;
+}
+.product .item .img ul .qick-view{
+  background-color: white;
+  color: black;
+  padding: 10px;
+  font-size: 20px;
+}
+/* title */
+.product .item{
+  text-align: center;
+}
+.product .item .title p{
+  margin: 5px 0px;
+}
+.product .item .title .price{
+  color: red;
+  font-size: 20px;
+}
+.product .item .title .price span{
+  font-size: 16px;
+  color: #b2b2b2;
+  text-decoration: line-through;
+}

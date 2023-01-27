@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<decorators defaultdir = "/WEB-INF/views/master-layout">
+	<decorator name="home" page = "home-common.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+		<decorator name="admin" page = "admin-common.jsp">
+		<pattern>/admin*</pattern>
+	</decorator>
+			<decorator name="api" page = "">
+		<pattern>/api*</pattern>
+	</decorator>
+
+</decorators>

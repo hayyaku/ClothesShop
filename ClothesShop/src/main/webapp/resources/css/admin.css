@@ -1,0 +1,50 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+
+.hide {
+  display: none;
+}
+
+/*---------------------
+		main
+-----------------------*/
+table tr td{
+  min-width: 50px;
+  padding: 10px;
+}
+table{
+  text-align: center;
+}
+table #td-id{
+  width: 50px;
+}
+table #td-img{
+  width: 150px;
+}
+table #td-control{
+  width: 190px;
+} 
+
+.show-item .item-image img{
+  width: 100px;
+  height: auto;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.pagination li{
+  cursor: pointer;
+}
+
+.page-active{
+  background-color: blue;
+  color: white;
+}
