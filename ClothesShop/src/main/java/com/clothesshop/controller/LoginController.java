@@ -32,6 +32,9 @@ public class LoginController {
 		UserDto loginInfor = userService.checkAccount(userDto);
 		if(loginInfor != null) {
 			SessionUtil.getInstance().add(request, "loginInfor", loginInfor);
+			if(loginInfor.getRole().equals("admin")) {
+				return "redirect:/admin/home";
+			}
 			return "redirect:/home";
 		}else {
 			model.addAttribute("loginErr", "Tài khoản hoặc mật khẩu không đúng");
