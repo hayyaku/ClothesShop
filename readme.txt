@@ -13,3 +13,10 @@ b7: Trên thanh công cụ chọn Window -> Web Browser -> Default system web br
 b8: Bên tab Project Explorer chuột phải vào project ClothesShop chọn Run As -> Run on server -> chọn thư mục Apache -> Tomcat v9.0 Server
 	-> chọn đến thư mục chứa apache-tomcat-9.0 có sẵn trong máy hoặc ấn Download and Install để tải -> chọn Finish
 
+các tài khoản tạo sẵn trong database:
+tài khoản user:
+	tk: user
+	mk: 123456
+tài khoản admin:
+	tk: admin
+	mk: 123456
