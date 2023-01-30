@@ -5,7 +5,7 @@ b1: Chạy MySQL Workbench
 b2: Ấn ctrl + T để new một Query tab
 b3: Coppy tất cả code trong file clothesshopdb.sql paste vào query tab vừa tạo rồi execute để tạo database.
 b4: Chạy eclipse chọn file -> import 
-    trong của sổ import chọn thư mục maven -> chọn Existing Maven Projects -> ấn next
+    trong cửa sổ import chọn thư mục maven -> chọn Existing Maven Projects -> ấn next
     -> chọn đường dẫn tới thư mục chứa thư mục project -> chọn select Folder -> ấn Finish
 b5: Chọn project vừa import -> src -> main -> WEB-INF -> config -> mở file springDispatcherServelet
 b6: Sửa value của username và password ở dòng 33 và 34 cho đúng với username và passwork của MySQL Workbeanch trong máy
