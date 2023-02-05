@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.clothesshop.dto.UserDto;
-import com.clothesshop.utils.SessionUtil;
 @SessionAttributes("loginInfor")
 public class AuthorizationFilter implements Filter {
 	
@@ -31,7 +30,7 @@ public class AuthorizationFilter implements Filter {
 		HttpServletResponse response = (HttpServletResponse) servletResponse;
 		String url = request.getRequestURI();
 		if(url.startsWith("/ClothesShop/admin")) {
-			UserDto userDto = (UserDto) SessionUtil.getInstance().get(request, "loginInfor");
+			UserDto userDto = (UserDto) request.getSession().getAttribute("loginInfor");
 			if(userDto != null) {
 				if(userDto.getRole().equals("admin")) {
 					filterChain.doFilter(servletRequest, servletResponse);

@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.clothesshop.dto.UserDto;
 import com.clothesshop.service.UserService;
-import com.clothesshop.utils.SessionUtil;
 
 @Controller
 @RequestMapping("/")
@@ -31,7 +30,7 @@ public class LoginController {
 	public String handleLogin(@ModelAttribute UserDto userDto, Model model,HttpServletRequest request) {
 		UserDto loginInfor = userService.checkAccount(userDto);
 		if(loginInfor != null) {
-			SessionUtil.getInstance().add(request, "loginInfor", loginInfor);
+			request.getSession().setAttribute("loginInfor", loginInfor);
 			if(loginInfor.getRole().equals("admin")) {
 				return "redirect:/admin/home";
 			}
@@ -44,7 +43,7 @@ public class LoginController {
 	
 	@GetMapping("logout")
 	public String logout(HttpSession session,HttpServletRequest request) {
-		SessionUtil.getInstance().remove(request, "loginInfor");
+		request.getSession().removeAttribute("loginInfor");
 		return "redirect:/login";
 	}
 
